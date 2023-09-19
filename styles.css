@@ -78,15 +78,15 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--light-blue);
+    color: var(--work-blue);
 }
 
 nav a:active {
-    color: var(--light-blue);
+    color: var(--work-blue);
 }
 
 .cta-button .button {
-    background-color: var(--light-blue); /* Button background color */
+    background-color: var(--work-blue); /* Button background color */
     color: var(--background-color); /* Button text color */
     padding: 10px 20px;
     border: none;
@@ -95,7 +95,7 @@ nav a:active {
 }
 
 .cta-button .button:hover {
-    background-color: #0056b3; /* Button hover background color */
+    background-color: var(--light-blue); /* Button hover background color */
 }
 
 /* Home section */
@@ -128,11 +128,11 @@ nav a:active {
 
 .h3-home {
     font-size: 20px;
-    color: var(--light-blue);
+    color: var(--work-blue);
 }
 
 .button {
-    background-color: var(--light-blue); /* Button background color */
+    background-color: var(--work-blue); /* Button background color */
     color: var(--background-color); /* Button text color */
     padding: 10px 20px;
     border: none;
@@ -143,7 +143,7 @@ nav a:active {
 }
 
 .button:hover {
-    background-color: #0056b3; /* Button hover background color */
+    background-color: var(--light-blue); /* Button hover background color */
 }
 
 .calender {
@@ -163,7 +163,7 @@ nav a:active {
     width: 343px; /* Adjust the width as needed */
     height: 300px;
     background-color: var(--dark-blue); /* Dark blue */
-    border: 2px solid var(--light-blue); /* Light blue border */
+    border: 2px solid var(--work-blue); /* Light blue border */
     border-radius: 8px;
     text-align: center;
     margin: 10px; /* Adjust the margin as needed */
@@ -176,12 +176,12 @@ nav a:active {
 }
 
 .h3-about {
-    color: var(--light-blue); /* Light blue color for heading */
+    color: var(--work-blue); /* Light blue color for heading */
 }
 
 .line {
     border: none;
-    border-top: 2px solid #6FEBEE; /* Light blue line underneath heading */
+    border-top: 2px solid var(--work-blue); /* Light blue line underneath heading */
     width: 100%; /* Adjust the line width as needed */
     margin: 10px 0 10px 0; /* Center the line horizontally */
 }
@@ -249,7 +249,7 @@ nav a:active {
 
 .faq-question {
     background-color: var(--dark-blue); /* Dark blue background color */
-    border: 2px solid var(--light-blue); /* Light blue border */
+    border: 2px solid var(--work-blue); /* Light blue border */
     border-radius: 8px;
     margin: 10px;
     text-align: left;
@@ -268,7 +268,7 @@ nav a:active {
 }
 
 .h3-faq {
-    color: var(--light-blue);
+    color: var(--work-blue);
     font-size: 20px;
     margin: 0;
     cursor: pointer;
@@ -276,7 +276,7 @@ nav a:active {
 
 .faq-toggle-icon {
     font-size: 30px;
-    color: var(--light-blue);
+    color: var(--work-blue);
     transition: transform 0.2s; /* Add smooth transition for icon rotation */
 }
 
@@ -329,7 +329,7 @@ nav a:active {
 }
 
 label {
-    color: var(--light-blue); /* Light blue label text color */
+    color: var(--work-blue); /* Light blue label text color */
     display: block;
     margin-bottom: 5px;
     text-align: left;
@@ -340,7 +340,7 @@ input[type="email"],
 textarea {
     width: 100%;
     padding: 10px;
-    border: 2px solid var(--light-blue); /* Light blue border for input fields */
+    border: 2px solid var(--work-blue); /* Light blue border for input fields */
     border-radius: 5px;
     background-color: var(--dark-blue); /* Dark blue input field background */
     color: #fff; /* White text color */
@@ -351,7 +351,7 @@ textarea {
 }
 
 button {
-    background-color: var(--light-blue); /* Light blue button background color */
+    background-color: var(--work-blue); /* Light blue button background color */
     color: var(--dark-blue); /* Dark blue button text color */
     padding: 10px 20px;
     border: none;
@@ -362,11 +362,11 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3; /* Button hover background color */
+    background-color: var(--work-blue); /* Button hover background color */
 }
 
 .contact p a{
-    color: var(--light-blue);
+    color: var(--work-blue);
 }
 
 /* Footer Styles */
@@ -380,5 +380,5 @@ footer {
 }
 
 footer p a{
-    color: var(--light-blue);
+    color: var(--work-blue);
 }
