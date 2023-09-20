@@ -39,6 +39,11 @@ body{
     text-align: center;
 }
 
+a:hover img {
+    transform: scale(1.05); /* Increase the size by 5% */
+    transition: transform 0.2s ease; /* Add a smooth transition effect */
+}
+
 /* Header styles */
 .fixed-header {
     position: fixed;
@@ -97,6 +102,68 @@ nav a:active {
 .cta-button .button:hover {
     background-color: var(--light-blue); /* Button hover background color */
 }
+
+/* Add this CSS for the hamburger menu */
+.menu-toggle {
+    display: none; /* Hide the hamburger menu icon initially */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    border-radius: 5px;
+    transition: transform 0.2s ease; /* Add a smooth transition for animation */
+}
+
+.mobile-nav {
+    display: none; /* Hide the mobile navigation initially */
+    text-align: center;
+}
+
+.mobile-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mobile-nav li {
+    margin: 10px 0;
+}
+
+/* Add media query to show/hide elements for smaller screens */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Show the hamburger menu icon for smaller screens */
+    }
+
+    .fixed-header {
+        justify-content: space-between; /* Adjust header layout for smaller screens */
+    }
+
+    .mobile-nav {
+        display: block; /* Show the mobile navigation for smaller screens */
+    }
+
+    .mobile-nav.active {
+        display: none; /* Hide mobile navigation when not active */
+    }
+
+    .bar.open {
+        transform: rotate(45deg) translate(5px, 5px); /* Rotate the first bar for open menu */
+    }
+
+    .bar.open:nth-child(2) {
+        opacity: 0; /* Hide the second bar for open menu */
+    }
+
+    .bar.open:last-child {
+        transform: rotate(-45deg) translate(5px, -5px); /* Rotate the third bar for open menu */
+    }
+}
+
 
 /* Home section */
 .home {
@@ -369,6 +436,10 @@ button:hover {
     color: var(--work-blue);
 }
 
+.contact p a:hover{
+    color: var(--light-blue);
+}
+
 /* Footer Styles */
 footer {
     background-color: var(--background-color);
@@ -381,4 +452,104 @@ footer {
 
 footer p a{
     color: var(--work-blue);
+}
+
+footer p a:hover{
+    color: var(--light-blue);
+}
+
+/* Add this CSS for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+    .container {
+        margin-top: 3800px;
+        text-align: center;
+    }
+    /* Header styles for smaller screens */
+    .fixed-header {
+        padding: 10px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .logo img {
+        max-height: 30px; /* Reduce logo size for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically for smaller screens */
+        text-align: center;
+    }
+
+    nav li {
+        margin-right: 0; /* Remove right margin for navigation links */
+        margin-bottom: 10px; /* Add spacing between navigation links */
+    }
+
+    /* Home section styles for smaller screens */
+    .h2-home {
+        font-size: 24px; /* Reduce heading font size */
+    }
+
+    .h3-home {
+        font-size: 16px; /* Reduce subheading font size */
+    }
+
+    .calender {
+        width: 100%; /* Make the calendar image responsive */
+        height: auto; /* Allow the image to scale proportionally */
+    }
+
+    /* About section styles for smaller screens */
+    .about-rectangle {
+        width: 100%; /* Make the about rectangles full-width */
+    }
+
+    .why {
+        width: 100%; /* Make the "why" rectangles full-width */
+    }
+
+    /* Work section styles for smaller screens */
+    .work-item {
+        flex-direction: column; /* Stack work items vertically */
+    }
+
+    .work-rectangle {
+        width: 100%; /* Make work rectangles full-width */
+        height: auto; /* Allow images to scale proportionally */
+    }
+
+    .ora {
+        margin-left: 0; /* Reset margin for "ora" work item */
+        margin-top: 20px; /* Add spacing between work items */
+    }
+
+    /* FAQ section styles for smaller screens */
+    .faq-question {
+        width: 100%; /* Make FAQ questions full-width */
+        margin-left: 0; /* Reset margin for FAQ questions */
+    }
+
+    .faq-answer {
+        padding: 10px; /* Adjust padding for FAQ answers */
+    }
+
+    /* Contact section styles for smaller screens */
+    .contact-form {
+        max-width: 100%; /* Make contact form full-width */
+    }
+
+    /* Footer styles for smaller screens */
+    footer {
+        padding: 10px; /* Reduce footer padding */
+    }
+}
+
+/* Add this CSS for even smaller screens (e.g., very small mobile devices) */
+@media screen and (max-width: 480px) {
+    /* Further adjust styles for very small screens */
+    .h2-home {
+        font-size: 20px; /* Reduce heading font size */
+    }
+
+    .h3-home {
+        font-size: 14px; /* Reduce subheading font size */
+    }
 }
