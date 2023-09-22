@@ -108,6 +108,9 @@ nav a:active {
     display: none; /* Hide the hamburger menu icon initially */
     flex-direction: column;
     cursor: pointer;
+    align-self: flex-end; /* Align the menu toggle to the right */
+    margin-bottom: 2px;
+    margin-right: 5px;
 }
 
 .bar {
@@ -213,9 +216,10 @@ nav a:active {
     background-color: var(--light-blue); /* Button hover background color */
 }
 
-.calender {
-    width: 600px;
-    height: 294px;
+
+.calendly-inline-widget {
+    width: 1000px;
+    height: 430px;
     object-fit: cover;
 }
 
@@ -483,6 +487,22 @@ footer p a:hover{
         margin-bottom: 10px; /* Add spacing between navigation links */
     }
 
+    .desktop-nav {
+        display: none;
+    }
+
+    /* Show the hamburger menu icon */
+    .menu-toggle {
+        display: flex;
+        margin-bottom: 2px;
+        margin-right: 5px;
+    }
+
+    /* Hide the CTA button on smaller screens */
+    .cta-button {
+        display: none;
+    }
+
     /* Home section styles for smaller screens */
     .h2-home {
         font-size: 24px; /* Reduce heading font size */
@@ -492,7 +512,7 @@ footer p a:hover{
         font-size: 16px; /* Reduce subheading font size */
     }
 
-    .calender {
+    .calendly-inline-widget {
         width: 100%; /* Make the calendar image responsive */
         height: auto; /* Allow the image to scale proportionally */
     }
