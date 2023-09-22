@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="script.js"></script>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
     <div class="pagewrapper">
@@ -18,7 +19,20 @@
                     <img src="logo2.jpg" alt="Logo">
                 </a>
             </div>
-            <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Our Work</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="https://calendly.com/geniusmuzama" target="_blank">Book a Meeting!</a></li>
+                </ul>
+            </nav>
+            <nav class="desktop-nav">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#work">Our Work</a></li>
@@ -26,7 +40,7 @@
                 </ul>
             </nav>
             <div class="cta-button">
-                <a href="https://calendly.com/" class="button">Book a Meeting!</a>
+                <a href="https://calendly.com/geniusmuzama" target="_blank" class="button">Book a Meeting!</a>
             </div>
         </header>
         <div class="container">
@@ -38,9 +52,8 @@
                     <h2 class="h2-home">Crafting <span class="home-success">Your Success</span> in the <br>Digital Landscape</h2>
                     <h3 class="h3-home">Drive More Leads and Boost Your Brand's Visibility</h3>
                     <a href="#contact" class="button">Let's Talk!</a>
-                    <a href="https://calendly.com/" target="_blank">
-                        <img src="calendly.webp" alt="Another Image" class="calender">
-                    </a>
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/geniusmuzama/30min"></div>
                 </div>
             </section>
             <section class="about" id="about">
@@ -107,7 +120,7 @@
                     </div>
                     <div class="work-rectangle right">
                         <a href="https://drora.sg/shop/water-fruit-pack/" target="_blank">
-                            <img src="ora-removebg-preview.png" alt="Orange Image">
+                            <img src="Images\ora-removebg-preview.png" alt="Orange Image">
                         </a>
                     </div>
                 </div>
