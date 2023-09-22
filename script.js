@@ -9,3 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+function toggleMenu() {
+    var mobileNav = document.querySelector('.mobile-nav');
+    mobileNav.classList.toggle('active');
+}
