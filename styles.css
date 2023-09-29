@@ -28,6 +28,7 @@ body{
     justify-content: center;
     background: #000;
     color: #fff;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -35,7 +36,7 @@ body{
 }
 
 .container {
-    margin-top: 3300px;
+    margin-top: 3200px;
     text-align: center;
 }
 
@@ -56,6 +57,7 @@ a:hover img {
     align-items: center;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    z-index: 2;
 }
 
 .logo img {
@@ -103,67 +105,52 @@ nav a:active {
     background-color: var(--light-blue); /* Button hover background color */
 }
 
-/* Add this CSS for the hamburger menu */
-.menu-toggle {
-    display: none; /* Hide the hamburger menu icon initially */
-    flex-direction: column;
+
+/* Hamburger Icon Styles */
+.hamburger-icon {
+    font-size: 24px;
     cursor: pointer;
-    align-self: flex-end; /* Align the menu toggle to the right */
-    margin-bottom: 2px;
-    margin-right: 5px;
+    display: none; /* Initially hidden */
 }
 
-.bar {
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    margin: 3px 0;
-    border-radius: 5px;
-    transition: transform 0.2s ease; /* Add a smooth transition for animation */
-}
-
+/* Mobile Navigation Styles */
 .mobile-nav {
-    display: none; /* Hide the mobile navigation initially */
+    display: none;
+    background-color: var(--background-color);
+    color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
     text-align: center;
+    padding: 10px 0;
+    z-index: 2;
 }
 
-.mobile-nav ul {
-    list-style-type: none;
-    padding: 0;
+/* Show Mobile Navigation When Active */
+.mobile-nav.active {
+    display: block;
 }
 
-.mobile-nav li {
-    margin: 10px 0;
+.mobile-nav a{
+    color: #fff;
 }
 
-/* Add media query to show/hide elements for smaller screens */
+/* Media Query to Show/Hide Elements */
 @media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: flex; /* Show the hamburger menu icon for smaller screens */
+    /* Hide Desktop Navigation */
+    .desktop-nav {
+        display: none;
     }
 
-    .fixed-header {
-        justify-content: space-between; /* Adjust header layout for smaller screens */
+    /* Show Hamburger Icon */
+    .hamburger-icon {
+        display: block;
     }
 
+    /* Show Mobile Navigation */
     .mobile-nav {
-        display: block; /* Show the mobile navigation for smaller screens */
-    }
-
-    .mobile-nav.active {
-        display: none; /* Hide mobile navigation when not active */
-    }
-
-    .bar.open {
-        transform: rotate(45deg) translate(5px, 5px); /* Rotate the first bar for open menu */
-    }
-
-    .bar.open:nth-child(2) {
-        opacity: 0; /* Hide the second bar for open menu */
-    }
-
-    .bar.open:last-child {
-        transform: rotate(-45deg) translate(5px, -5px); /* Rotate the third bar for open menu */
+        display: block;
     }
 }
 
@@ -221,6 +208,7 @@ nav a:active {
     width: 1000px;
     height: 430px;
     object-fit: cover;
+    z-index: 1;
 }
 
 /* about styles */
@@ -464,6 +452,9 @@ footer p a:hover{
 
 /* Add this CSS for smaller screens (e.g., mobile devices) */
 @media screen and (max-width: 768px) {
+    .pagewrapper {
+        width: 90%;
+    }
     .container {
         margin-top: 3800px;
         text-align: center;
@@ -471,34 +462,13 @@ footer p a:hover{
     /* Header styles for smaller screens */
     .fixed-header {
         padding: 10px 10px; /* Reduce padding for smaller screens */
+        width: 90%;
     }
 
     .logo img {
         max-height: 30px; /* Reduce logo size for smaller screens */
     }
 
-    nav ul {
-        flex-direction: column; /* Stack navigation links vertically for smaller screens */
-        text-align: center;
-    }
-
-    nav li {
-        margin-right: 0; /* Remove right margin for navigation links */
-        margin-bottom: 10px; /* Add spacing between navigation links */
-    }
-
-    .desktop-nav {
-        display: none;
-    }
-
-    /* Show the hamburger menu icon */
-    .menu-toggle {
-        display: flex;
-        margin-bottom: 2px;
-        margin-right: 5px;
-    }
-
-    /* Hide the CTA button on smaller screens */
     .cta-button {
         display: none;
     }
@@ -513,17 +483,17 @@ footer p a:hover{
     }
 
     .calendly-inline-widget {
-        width: 100%; /* Make the calendar image responsive */
+        width: 90%; /* Make the calendar image responsive */
         height: auto; /* Allow the image to scale proportionally */
     }
 
     /* About section styles for smaller screens */
     .about-rectangle {
-        width: 100%; /* Make the about rectangles full-width */
+        width: 90%; /* Make the about rectangles full-width */
     }
 
     .why {
-        width: 100%; /* Make the "why" rectangles full-width */
+        width: 90%; /* Make the "why" rectangles full-width */
     }
 
     /* Work section styles for smaller screens */
@@ -532,7 +502,7 @@ footer p a:hover{
     }
 
     .work-rectangle {
-        width: 100%; /* Make work rectangles full-width */
+        width: 90%; /* Make work rectangles full-width */
         height: auto; /* Allow images to scale proportionally */
     }
 
@@ -541,10 +511,14 @@ footer p a:hover{
         margin-top: 20px; /* Add spacing between work items */
     }
 
+    .big {
+        display: none;
+    }
+
     /* FAQ section styles for smaller screens */
     .faq-question {
-        width: 100%; /* Make FAQ questions full-width */
-        margin-left: 0; /* Reset margin for FAQ questions */
+        width: 90%; /* Make FAQ questions full-width */
+        margin-left: auto; /* Reset margin for FAQ questions */
     }
 
     .faq-answer {
@@ -553,7 +527,7 @@ footer p a:hover{
 
     /* Contact section styles for smaller screens */
     .contact-form {
-        max-width: 100%; /* Make contact form full-width */
+        max-width: 90%; /* Make contact form full-width */
     }
 
     /* Footer styles for smaller screens */
@@ -573,3 +547,10 @@ footer p a:hover{
         font-size: 14px; /* Reduce subheading font size */
     }
 }
+
+@media  screen and (min-width: 768px) {
+    .small {
+        display: none;
+    }
+}
+
