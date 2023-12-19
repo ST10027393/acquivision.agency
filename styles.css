@@ -60,100 +60,108 @@ a:hover img {
     z-index: 2;
 }
 
-.logo img {
-    max-height: 40px; /* Adjust the height as needed */
-}
-
 nav{
-    margin-left: auto;
+    background: var(--background-color);
+    height: 60px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  .logo img {
+    max-height: 40px; /* Adjust the height as needed */    
 }
 
-nav li {
-    display: inline;
-    margin-right: 20px; /* Adjust spacing between links */
-}
+nav ul{
+    float: right;
+    margin-right: 10px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    color: var(--secondary-blue);
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
 
-nav a {
-    text-decoration: none;
-    color: #fff; /* Link color */
-}
-
-nav a:hover {
-    color: var(--work-blue);
-}
-
-nav a:active {
-    color: var(--work-blue);
-}
-
-.cta-button .button {
+  .cta-button .button {
     background-color: var(--work-blue); /* Button background color */
     color: var(--background-color); /* Button text color */
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     text-decoration: none;
-}
-
-.cta-button .button:hover {
-    background-color: var(--light-blue); /* Button hover background color */
-}
-
-
-/* Hamburger Icon Styles */
-.hamburger-icon {
-    font-size: 24px;
-    cursor: pointer;
-    display: none; /* Initially hidden */
-}
-
-/* Mobile Navigation Styles */
-.mobile-nav {
-    display: none;
-    background-color: var(--background-color);
-    color: #fff;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 2;
-}
-
-/* Show Mobile Navigation When Active */
-.mobile-nav.active {
-    display: block;
-}
-
-.mobile-nav a{
-    color: #fff;
-}
-
-/* Media Query to Show/Hide Elements */
-@media screen and (max-width: 768px) {
-    /* Hide Desktop Navigation */
-    .desktop-nav {
-        display: none;
     }
 
-    /* Show Hamburger Icon */
-    .hamburger-icon {
-        display: block;
+    .cta-button .button:hover {
+        background-color: var(--light-blue); /* Button hover background color */
     }
 
-    /* Show Mobile Navigation */
-    .mobile-nav {
-        display: block;
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
     }
-}
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: var(--background-color);
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: var(--secondary-blue);
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
 
+    .fas {
+        margin-bottom: 5px;
+    }
+  }
 
 /* Home section */
 .home {
@@ -172,7 +180,7 @@ nav a:active {
     margin-bottom: 20px; /* Add space between the image and text */
 }
 .logo2 {
-    margin-top: 200px;
+    margin-top: 175%;
 }
 
 .h2-home {
@@ -222,7 +230,7 @@ nav a:active {
     width: 343px; /* Adjust the width as needed */
     height: 300px;
     background-color: var(--dark-blue); /* Dark blue */
-    border: 2px solid var(--light-blue); /* Light blue border */
+    border: 2px solid var(--work-blue); /* Light blue border */
     border-radius: 8px;
     text-align: center;
     margin: 10px; /* Adjust the margin as needed */
@@ -240,7 +248,7 @@ nav a:active {
 
 .line {
     border: none;
-    border-top: 2px solid var(--light-blue); /* Light blue line underneath heading */
+    border-top: 2px solid var(--work-blue); /* Light blue line underneath heading */
     width: 100%; /* Adjust the line width as needed */
     margin: 10px 0 10px 0; /* Center the line horizontally */
 }
@@ -286,7 +294,7 @@ nav a:active {
 }
 
 .h3-work {
-    color: var(--light-blue);
+    color: var(--work-blue);
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -327,7 +335,7 @@ nav a:active {
 }
 
 .h3-faq {
-    color: var(--light-blue);
+    color: var(--work-blue);
     font-size: 20px;
     margin: 0;
     cursor: pointer;
@@ -335,7 +343,7 @@ nav a:active {
 
 .faq-toggle-icon {
     font-size: 30px;
-    color: var(--light-blue);
+    color: var(--work-blue);
     transition: transform 0.2s; /* Add smooth transition for icon rotation */
 }
 
@@ -462,7 +470,7 @@ footer p a:hover{
     /* Header styles for smaller screens */
     .fixed-header {
         padding: 10px 10px; /* Reduce padding for smaller screens */
-        width: 90%;
+        width: 100%;
     }
 
     .logo img {
@@ -474,6 +482,10 @@ footer p a:hover{
     }
 
     /* Home section styles for smaller screens */
+    .logo2 {
+        margin-top: 100%;
+    }
+
     .h2-home {
         font-size: 24px; /* Reduce heading font size */
     }
