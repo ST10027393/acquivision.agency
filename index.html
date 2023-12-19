@@ -10,23 +10,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/4c32b59362.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4c32b59362.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
     <div class="pagewrapper">
         <header class="fixed-header">
+            <!-- 
             <div class="logo">
                 <a href="https://st10027393.github.io/acquivision.agency/">
-                    <img src="logo2.jpg" alt="Logo">
+                    <img src="Images\with bg\logo2.jpg" alt="Logo">
                 </a>
             </div>
-            
+        -->
             <!-- Hamburger Icon -->
+            <!-- 
             <div class="hamburger-icon" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
+                <i class="fas fa-bars"></i> -->
+                <!-- Mobile Navigation Menu (Initially Hidden) -->
+                <!-- <div class="mobile-nav">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#work">Our Work</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="https://calendly.com/geniusmuzama" target="_blank">Book a Meeting!</a></li>
+                    </ul>
+                </div>
+            </div> -->
 
-            <!-- Desktop Navigation -->
+            <!-- Desktop Navigation
             <nav class="desktop-nav">
                 <ul>
                     <li><a href="#about">About</a></li>
@@ -35,19 +47,28 @@
                 </ul>
             </nav>
 
-            <!-- Mobile Navigation Menu (Initially Hidden) -->
-            <div class="mobile-nav">
+            
+
+            <div class="cta-button">
+                <a href="https://calendly.com/geniusmuzama" target="_blank" class="button">Book a Meeting!</a>
+            </div>
+        -->
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                    <a href="https://st10027393.github.io/acquivision.agency/">
+                        <img src="logo2.jpg" alt="Logo">
+                    </a>
                 <ul>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#work">Our Work</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="https://calendly.com/geniusmuzama" target="_blank">Book a Meeting!</a></li>
                 </ul>
-            </div>
-
-            <div class="cta-button">
-                <a href="https://calendly.com/geniusmuzama" target="_blank" class="button">Book a Meeting!</a>
-            </div>
+            </nav>
         </header>
         <div class="container">
             <section class="home" id="home">
@@ -289,16 +310,19 @@
 
         // JavaScript code to toggle mobile navigation menu
 
+        /*
+        // Function to toggle mobile navigation menu
         function toggleMobileMenu() {
             const mobileNav = document.querySelector('.mobile-nav');
             mobileNav.classList.toggle('active');
         }
 
         // Add an event listener to the hamburger icon to trigger the function
-        const hamburgerIcon = document.querySelector('.hamburger-icon');
+        const hamburgerIcon = document.querySelector('.hamburger-icon i'); // Target the <i> element inside the hamburger icon div
         hamburgerIcon.addEventListener('click', toggleMobileMenu);
+        */
 
-
+       
     </script>
 </body>
 </html>
