@@ -9,8 +9,8 @@
 
 :root {
     --light-blue: #6FEBEE; /* Define your primary color */
-    --work-blue: #2596BE; /* Define your secondary color */
-    --background-color: #030518; /* Define your background color */
+    --work-blue: #0E0095; /* Define your secondary color */
+    --background-color: #000; /* Define your background color */
     --dark-blue: #050221; /* Define your button background color */
     --secondary-blue: #0057E1; /* Define your button text color */
   }
