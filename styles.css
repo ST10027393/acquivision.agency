@@ -493,7 +493,9 @@ footer p a:hover{
 
     /* Home section styles for smaller screens */
     .logo2 {
-        margin-top: 100%;
+        margin-top: 50%;
+        height: 80%;
+        width: 80%;
     }
 
     .h2-home {
