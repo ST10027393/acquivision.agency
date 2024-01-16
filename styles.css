@@ -329,7 +329,7 @@ nav ul{
     cursor: pointer;
     overflow: hidden; /* Hide overflowing content */
     width: 800px;
-    margin-left: 20px;
+    margin-left: 75px;
 }
 
 .faq-question-toggle {
