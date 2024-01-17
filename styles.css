@@ -199,11 +199,11 @@ nav ul{
 
 .h3-home {
     font-size: 20px;
-    color: var(--work-blue);
+    color: var(--light-blue);
 }
 
 .button {
-    background-color: var(--work-blue); /* Button background color */
+    background-color: var(--light-blue); /* Button background color */
     color: var(--background-color); /* Button text color */
     padding: 10px 20px;
     border: none;
@@ -300,7 +300,7 @@ nav ul{
 }
 
 .h3-work {
-    color: var(--work-blue);
+    color: var(--light-blue);
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -439,7 +439,7 @@ button:hover {
 }
 
 .contact p a{
-    color: var(--work-blue);
+    color: var(--light-blue);
 }
 
 .contact p a:hover{
@@ -457,7 +457,7 @@ footer {
 }
 
 footer p a{
-    color: var(--work-blue);
+    color: var(--light-blue);
 }
 
 footer p a:hover{
