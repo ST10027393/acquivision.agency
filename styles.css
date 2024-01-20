@@ -279,7 +279,7 @@ nav ul{
 .work-rectangle {
     width: 350px; 
     height: 200px; 
-    background-color: var(--work-blue); 
+    background-color: var(--light-blue); 
     text-align: center;
     display: flex;
     align-items: center;
@@ -537,6 +537,9 @@ footer p a:hover{
 
     .big {
         display: none;
+    }
+    .h3-work {
+        text-align: center;
     }
 
     /* FAQ section styles for smaller screens */
